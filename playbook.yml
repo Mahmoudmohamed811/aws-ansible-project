@@ -1,0 +1,27 @@
+---
+- name: Deploy AWS Infrastructure with CloudFormation
+  hosts: localhost
+  gather_facts: no
+  roles:
+    - roles/infra
+
+
+- name: Setup Ec2
+  hosts: localhost
+  gather_facts: no
+  roles:
+    - roles/setup
+
+- name: Deploy Database
+  hosts: localhost
+  gather_facts: no
+  roles:
+    - roles/db
+
+- name: Deploy Application
+  hosts: webserver
+  gather_facts: no
+  become: yes
+  roles:
+    - roles/app
+

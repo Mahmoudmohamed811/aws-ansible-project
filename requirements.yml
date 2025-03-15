@@ -1,0 +1,8 @@
+- name: app
+  src: Mahmoudmohamed811.ansible-role-app
+- name: db
+  src: Mahmoudmohamed811.ansible-role-db
+- name: infra
+  src: Mahmoudmohamed811.ansible-role-infra
+- name: setup
+  src: Mahmoudmohamed811.ansible-role-setup
